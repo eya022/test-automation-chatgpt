@@ -1,0 +1,42 @@
+name: CI/CD - Tests Automation
+
+# Déclenchement du workflow
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Cloner le projet
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. Installer Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    # 3. Installer les dépendances
+    - name: Install dependencies
+      run: npm install
+
+    # 4. Installer Playwright browsers
+    - name: Install Playwright browsers
+      run: npx playwright install
+
+    # 5. Exécuter les tests
+    - name: Run Playwright tests
+      run: npx playwright test --reporter=list
+
+    # 6. Archiver les résultats et screenshots
+    - name: Upload Test Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: test-results/

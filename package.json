@@ -1,0 +1,48 @@
+{
+  "name": "test-automation-chatgpt",
+  "version": "1.0.0",
+  "description": "Automated testing with Playwright and Cucumber - TP Qualité & Tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:all": "npm run test && npm run cucumber",
+    "cucumber": "cucumber-js features/**/*.feature",
+    "cucumber:report": "cucumber-js features/**/*.feature --format html:cucumber-report.html",
+    "report": "playwright show-report",
+    "fetch-results": "node scripts/fetch-lambdatest-results.js",
+    "setup": "npx playwright install --with-deps && npm run setup:dirs",
+    "setup:dirs": "mkdir -p test-results playwright-report results logs",
+    "clean": "rm -rf test-results playwright-report results logs coverage",
+    "lint": "eslint tests/ features/ scripts/ utils/",
+    "pretest": "npm run clean",
+    "posttest": "npm run report"
+  },
+  "keywords": [
+    "testing",
+    "automation",
+    "playwright",
+    "cucumber",
+    "selenium",
+    "qa"
+  ],
+  "author": "Student TP",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.57.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.5",
+    "winston": "^3.11.0"
+  }
+}

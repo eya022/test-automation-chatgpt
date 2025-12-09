@@ -1,0 +1,52 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - button "تطبيقات Google" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+      - link "تسجيل الدخول" [ref=e13] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+  - img "Google" [ref=e16]
+  - search [ref=e24]:
+    - generic [ref=e26]:
+      - generic [ref=e28]:
+        - img [ref=e32]
+        - combobox "بحث" [active] [ref=e35]
+        - generic [ref=e37]:
+          - button "أدوات الإدخال" [ref=e38] [cursor=pointer]:
+            - img [ref=e40]
+          - button "البحث الصوتي" [ref=e42] [cursor=pointer]:
+            - img [ref=e43]
+          - button "بحث بالصور" [ref=e45] [cursor=pointer]:
+            - img [ref=e46]
+      - generic [ref=e49]:
+        - button "بحث Google‏" [ref=e50] [cursor=pointer]
+        - button "ضربة حظ" [ref=e51] [cursor=pointer]
+  - generic [ref=e54]:
+    - text: "محرّك بحث Google متوفّر باللغة:"
+    - link "Français" [ref=e55] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_OOFrFYhOBHdB3tC7AsDUnpEpd5o%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwiZv6CPhbGRAxXEa_UHHQYXK0UQ2ZgBCBU
+    - link "English" [ref=e56] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_OOFrFYhOBHdB3tC7AsDUnpEpd5o%3D&hl=en&source=homepage&sa=X&ved=0ahUKEwiZv6CPhbGRAxXEa_UHHQYXK0UQ2ZgBCBY
+  - contentinfo [ref=e58]:
+    - generic [ref=e59]: تونس
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - link "لمحة" [ref=e62] [cursor=pointer]:
+          - /url: https://about.google/?utm_source=google-TN&utm_medium=referral&utm_campaign=hp-footer&fg=1
+        - link "الإعلانات" [ref=e63] [cursor=pointer]:
+          - /url: https://www.google.com/intl/ar_tn/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+        - link "الأعمال" [ref=e64] [cursor=pointer]:
+          - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+        - link "آلية عمل \"بحث Google\"" [ref=e65] [cursor=pointer]:
+          - /url: https://google.com/search/howsearchworks/?fg=1
+      - generic [ref=e66]:
+        - link "الخصوصية" [ref=e67] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy?hl=ar-TN&fg=1
+        - link "البنود" [ref=e68] [cursor=pointer]:
+          - /url: https://policies.google.com/terms?hl=ar-TN&fg=1
+        - button "الإعدادات" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: الإعدادات
+```
